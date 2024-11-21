@@ -16,10 +16,10 @@ jobs:
         # create folder for test reports
         - name: Create folder for reports
           run: mkdir reports
-        #- name: install
-          #run: |
-           #pip install --upgrade robotframework-seleniumlibrary
-           #pip install robotframework-csvlibrary
+        - name: install
+          run: |
+           pip install --upgrade robotframework-seleniumlibrary
+           pip install robotframework-csvlibrary-py3
 
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests
@@ -30,7 +30,6 @@ jobs:
           # place tests in folder tests or change docker run command accordingly
           # configure -e ROBOT_OPTIONS according to yout tests, or remove it if no special configuration is needed
           run: |
-            pip install robotframework-csvlibrary-py3
             docker run \
               -v /dev/shm:/dev/shm \
               -v ${PWD}/reports:/opt/robotframework/reports:Z \

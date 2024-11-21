@@ -1,0 +1,14 @@
+*** Settings ***
+Resource    ../../../PageKeyword/Phonix/loginrequester.txt
+Resource    ../../../PageKeyword/Phonix/OpenApp.txt
+Resource          ../../../PageVariable/Phonix/All.txt
+*** Keywords ***
+
+
+createaccount
+   Open Excel Document      filename=${CURDIR}\\Config\\userID.xlsx        doc_id=docname1
+   ${listID}    Read Excel Row    row_num=2          max_num=10
+   OpenApplogin
+   loginrequester.loginrequesters   ${listID}
+   Close All Browsers
+}

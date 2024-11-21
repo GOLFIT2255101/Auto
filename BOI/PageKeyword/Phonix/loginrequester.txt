@@ -13,3 +13,88 @@ loginrequesters
    Wait Until Page Contains element    ${Buttonloginfmt}      timeout=45s
    Input Text    ${Buttonloginfmt}    ${listIDs}[0]
    Wait Until Page Contains element    ${Buttonlogin}      timeout=45s
+   Waits
+   #sleep    ${wait}
+   Click Element    ${Buttonlogin}
+   Waits
+   Wait Until Page Contains element    ${Buttonpasswd}      timeout=45s
+   Input Text    ${Buttonpasswd}    ${listIDs}[1]
+   Click Element    ${Buttonlogin}
+   Wait Until Page Contains element    ${Buttonlogin}      timeout=45s
+   Waits
+   Click Element    ${Buttonlogin}
+   Wait Until Page Contains     ${getDashboard}       timeout=45s
+
+
+
+   go to  ${Buttondevmode}
+   Wait Until Page Contains element    ${waitproject_name}        timeout=45s
+   Waits
+   Click Element    ${font-bold}
+   Waits
+   Input Text    ${waitproject_name}     ${listIDs}[2]
+   Click Element    xpath=(//p)[33]
+   Click Element    ${Button1}
+   Waits
+   Click Element    ${Button2}
+   Waits
+   Wait Until Page Contains element    ${Button3}        timeout=45s
+   Waits
+   ${Code}  Get Text  ${getDocument}
+   log to console   ${Code}
+   Click Element   ${getButton}
+   Wait Until Page Contains     ${getDashboard}       timeout=45s
+
+
+  #admin
+   go to  https://eboi-dev.azurewebsites.net/request-promotion/in-process_draft
+   Wait Until Page Contains element    ${Buttonloginfmt}      timeout=45s
+   Input Text    ${Buttonloginfmt}    ${listIDs}[3]
+   Wait Until Page Contains element    ${Buttonlogin}      timeout=45s
+   Waits
+   Click Element    ${Buttonlogin}
+   Waits
+   Wait Until Page Contains element    ${Buttonpasswd}      timeout=45s
+   Input Text    ${Buttonpasswd}    ${listIDs}[4]
+   Click Element    ${Buttonlogin}
+   Wait Until Page Contains      ${listIDs}[2]      timeout=45s
+    Waits
+    Click Element     //div[@class="ml-4"]
+    Wait Until Page Contains element    //li[@role="menuitem"]      timeout=45s
+    Click Element     //li[@role="menuitem"]
+    Waitss
+    Waitss
+    Click Button    //button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover"]
+    Waits
+    Wait Until Page Contains element    //div[@aria-label="10. รายการเอกสารแนบ"]      timeout=45s
+    Waits
+    Click Element     //div[@aria-label="10. รายการเอกสารแนบ"]
+    Wait Until Page Contains element    //button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 [&:not(:first-child):not(:last-child)]:rounded-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-secondary text-secondary-foreground rounded-none first:rounded-s-medium last:rounded-e-medium data-[hover=true]:opacity-hover"]      timeout=45s
+    Click Element    //button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 [&:not(:first-child):not(:last-child)]:rounded-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-secondary text-secondary-foreground rounded-none first:rounded-s-medium last:rounded-e-medium data-[hover=true]:opacity-hover"]
+    Wait Until Page Contains element    //button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover"]       timeout=45s
+    Click Element    //button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover"]
+    Wait Until Page Contains element    //div[@class="flex flex-1 flex-col gap-3 px-6 font-thai py-6"]   timeout=45s
+    Waits
+    ${Codedoc}  Get Text  //div[@class="flex flex-1 flex-col gap-3 px-6 font-thai py-6"]
+    log to console   ${Codedoc}
+    Click Element      //button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success/20 text-success-800 dark:text-success data-[hover=true]:opacity-hover"]
+
+    Wait Until Page Contains element    //div[@class="ml-4"]    timeout=45s
+    Waits
+    Click Element     //div[@class="ml-4"]
+    Wait Until Page Contains element    //li[@role="menuitem"]      timeout=45s
+    Click Element     //li[@role="menuitem"]
+    Waitss
+    Wait Until Page Contains element     //input[@name="issue_certification.memolink.memo_no"]   timeout=45s
+    Input Text    //input[@name="issue_certification.memolink.memo_no"]    ${Codedoc}
+    Click Element    //button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 [&:not(:first-child):not(:last-child)]:rounded-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success text-success-foreground rounded-none first:rounded-s-medium last:rounded-e-medium data-[hover=true]:opacity-hover"]
+    Wait Until Page Contains    ยืนยัน     timeout=45s
+    Click Element    xpath=(//button[@class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover"])[3]
+
+
+    Wait Until Page Contains element    //div[@class="ml-4"]    timeout=45s
+    Waits
+    Click Element     //div[@class="ml-4"]
+    Wait Until Page Contains element    //li[@role="menuitem"]      timeout=45s
+    Click Element     //li[@role="menuitem"]
+    Waitss

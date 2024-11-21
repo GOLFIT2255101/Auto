@@ -1,4 +1,5 @@
 *** Settings ***
+Library     CSVLibrary
 Resource    ../../../PageKeyword/Phonix/loginrequester.txt
 Resource    ../../../PageKeyword/Phonix/OpenApp.txt
 Resource          ../../../PageVariable/Phonix/All.txt

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20211004 20:12:10.736" rpa="false">
+<suite id="s1" name="Main" source="D:\git2\geopulse_at\main.robot">
+<test id="s1-t1" name="Pointer selection on default grid int case1">
+<kw name="Test Pointer selection on default grid int" library="Case_TC_001_int">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${codes}[0]</arg>
+</arguments>
+<assign>
+<var>@{linelist}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.691" level="INFO">@{linelist} = [ 00 ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.691" endtime="20211004 20:12:12.691"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${codes}[0]</arg>
+</arguments>
+<assign>
+<var>@{linelistt}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.692" level="INFO">@{linelistt} = [ 00 ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.692" endtime="20211004 20:12:12.692"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${Filetxt}</arg>
+</arguments>
+<assign>
+<var>${File}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.693" level="INFO" html="yes">Getting file '&lt;a href="file://D:\git2\geopulse_at\SELECTION.txt"&gt;D:\git2\geopulse_at\SELECTION.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20211004 20:12:12.693" level="INFO">${File} = Age
+Gender
+Top 10 Home Location
+Top 10 Work Location
+Average Travel Distance to Work
+Location Profile
+Customer Segment
+Handset Type
+Mobile Banking Usage
+Monthly Bill Payment
+Prepaid/Postpaid Subscript...</msg>
+<status status="PASS" starttime="20211004 20:12:12.693" endtime="20211004 20:12:12.693"></status>
+</kw>
+<kw name="Split To Lines" library="String">
+<doc>Splits the given string to lines.</doc>
+<arguments>
+<arg>${File}</arg>
+</arguments>
+<assign>
+<var>@{list}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.694" level="INFO">12 lines returned</msg>
+<msg timestamp="20211004 20:12:12.695" level="INFO">@{list} = [ Age | Gender | Top 10 Home Location | Top 10 Work Location | Average Travel Distance to Work | Location Profile | Customer Segment | Handset Type | Mobile Banking Usage | Monthly Bill Payment | Prep...</msg>
+<status status="PASS" starttime="20211004 20:12:12.694" endtime="20211004 20:12:12.695"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${Filetxts}</arg>
+</arguments>
+<assign>
+<var>${Fileuse}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.695" level="INFO" html="yes">Getting file '&lt;a href="file://D:\git2\geopulse_at\userid.txt"&gt;D:\git2\geopulse_at\userid.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20211004 20:12:12.696" level="INFO">${Fileuse} = bomtest006</msg>
+<status status="PASS" starttime="20211004 20:12:12.695" endtime="20211004 20:12:12.696"></status>
+</kw>
+<kw name="Split To Lines" library="String">
+<doc>Splits the given string to lines.</doc>
+<arguments>
+<arg>${Fileuse}</arg>
+</arguments>
+<assign>
+<var>@{lists_}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.697" level="INFO">1 lines returned</msg>
+<msg timestamp="20211004 20:12:12.697" level="INFO">@{lists_} = [ bomtest006 ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.697" endtime="20211004 20:12:12.697"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${idcasein1}</arg>
+</arguments>
+<assign>
+<var>${Filetagcase1}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.698" level="INFO" html="yes">Getting file '&lt;a href="file://D:\git2\geopulse_at\intmapA\Case1.txt"&gt;D:\git2\geopulse_at\intmapA\Case1.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20211004 20:12:12.699" level="INFO">${Filetagcase1} = bomtest006</msg>
+<status status="PASS" starttime="20211004 20:12:12.698" endtime="20211004 20:12:12.699"></status>
+</kw>
+<kw name="Split To Lines" library="String">
+<doc>Splits the given string to lines.</doc>
+<arguments>
+<arg>${Filetagcase1}</arg>
+</arguments>
+<assign>
+<var>@{listcase1}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.700" level="INFO">1 lines returned</msg>
+<msg timestamp="20211004 20:12:12.700" level="INFO">@{listcase1} = [ bomtest006 ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.700" endtime="20211004 20:12:12.700"></status>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${idTag}</arg>
+</arguments>
+<assign>
+<var>${Filetag}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.702" level="INFO" html="yes">Getting file '&lt;a href="file://D:\git2\geopulse_at\idTag.txt"&gt;D:\git2\geopulse_at\idTag.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20211004 20:12:12.702" level="INFO">${Filetag} = Generic</msg>
+<status status="PASS" starttime="20211004 20:12:12.701" endtime="20211004 20:12:12.702"></status>
+</kw>
+<kw name="Split To Lines" library="String">
+<doc>Splits the given string to lines.</doc>
+<arguments>
+<arg>${Filetag}</arg>
+</arguments>
+<assign>
+<var>@{listtag}</var>
+</assign>
+<msg timestamp="20211004 20:12:12.703" level="INFO">1 lines returned</msg>
+<msg timestamp="20211004 20:12:12.703" level="INFO">@{listtag} = [ Generic ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.702" endtime="20211004 20:12:12.703"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>@{list}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:12.704" level="INFO">@{list} = [ Age | Gender | Top 10 Home Location | Top 10 Work Location | Average Travel Distance to Work | Location Profile | Customer Segment | Handset Type | Mobile Banking Usage | Monthly Bill Payment | Prep...</msg>
+<status status="PASS" starttime="20211004 20:12:12.703" endtime="20211004 20:12:12.704"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>@{listtag}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:12.705" level="INFO">@{listtag} = [ Generic ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.704" endtime="20211004 20:12:12.705"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>@{linelistt}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:12.706" level="INFO">@{linelistt} = [ 00 ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.705" endtime="20211004 20:12:12.706"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>@{linelist}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:12.706" level="INFO">@{linelist} = [ 00 ]</msg>
+<status status="PASS" starttime="20211004 20:12:12.706" endtime="20211004 20:12:12.707"></status>
+</kw>
+<kw name="${INDEXcase} IN [ @{listcase1} ]" type="for">
+<kw name="${INDEXcase} = bomtest006" type="foritem">
+<kw name="Internal_login" library="Internal">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>******</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:12.709" endtime="20211004 20:12:12.710"></status>
+</kw>
+<kw name="Open Browser With/Without Headless" library="CommonKeywords">
+<arguments>
+<arg>${ENV_URL.URL_GPRC}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${COMMON_IS_HEADLESS}' == 'TRUE'</arg>
+<arg>Open Browser</arg>
+<arg>${url}</arg>
+<arg>headlesschrome</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:12.715" level="INFO">Opening browser 'gc' to base url 'https://geopulse.truecorp.co.th/truesso/login'.</msg>
+<status status="PASS" starttime="20211004 20:12:12.714" endtime="20211004 20:12:21.896"></status>
+</kw>
+<status status="PASS" starttime="20211004 20:12:12.713" endtime="20211004 20:12:21.896"></status>
+</kw>
+<status status="PASS" starttime="20211004 20:12:12.711" endtime="20211004 20:12:21.897"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20211004 20:12:22.899" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211004 20:12:21.897" endtime="20211004 20:12:22.899"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${ENV_URL.URL_GPRC}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:22.901" level="INFO">Opening url 'https://geopulse.truecorp.co.th/truesso/login'</msg>
+<status status="PASS" starttime="20211004 20:12:22.900" endtime="20211004 20:12:24.865"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211004 20:12:24.866" endtime="20211004 20:12:27.148"></status>
+</kw>
+<kw name="Add Cookie" library="SeleniumLibrary">
+<doc>Adds a cookie to your current session.</doc>
+<arguments>
+<arg>x-app-version</arg>
+<arg>${app-version}</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:27.149" endtime="20211004 20:12:27.159"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${app-version}</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:27.160" endtime="20211004 20:12:27.161"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(@class,'TrueSSO-module__button___')]</arg>
+</arguments>
+<msg timestamp="20211004 20:12:27.163" level="INFO">Clicking element '//a[contains(@class,'TrueSSO-module__button___')]'.</msg>
+<status status="PASS" starttime="20211004 20:12:27.162" endtime="20211004 20:12:27.680"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//input[@name="callback_0"]</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:27.681" endtime="20211004 20:12:28.578"></status>
+</kw>
+<status status="PASS" starttime="20211004 20:12:12.708" endtime="20211004 20:12:28.579"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>******</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:28.580" endtime="20211004 20:12:28.580"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>case 1</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:28.581" endtime="20211004 20:12:28.582"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${INDEXcase}</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:28.584" endtime="20211004 20:12:28.585"></status>
+</kw>
+<kw name="Login Internally with Username and Password" library="CommonKeywords">
+<arguments>
+<arg>${INDEXcase}</arg>
+<arg>${PASSWORD_TRUESSO}</arg>
+<arg>${locationint}[0]${imgs}[0]${INDEXcase}1.jpg</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGINPAGE_INPUT_USERNAME}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:28.588" level="INFO">Typing text 'bomtest006' into text field '//input[@name="callback_0"]'.</msg>
+<status status="PASS" starttime="20211004 20:12:28.588" endtime="20211004 20:12:28.777"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGINPAGE_INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:28.779" level="INFO">Typing password into text field '//input[@name="callback_1"]'.</msg>
+<msg timestamp="20211004 20:12:28.833" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211004 20:12:28.927" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211004 20:12:28.778" endtime="20211004 20:12:28.928"></status>
+</kw>
+<kw name="Take screenshot by flag IS_SCREENSHOT" library="CommonKeywords">
+<arguments>
+<arg>${imagePath}</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${COMMON_IS_SCREENSHOT}' == 'TRUE'</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>${imagePath}</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:28.930" endtime="20211004 20:12:28.931"></status>
+</kw>
+<status status="PASS" starttime="20211004 20:12:28.929" endtime="20211004 20:12:28.931"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGINPAGE_BUTTON_LOGIN}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:28.934" level="INFO">Clicking element '//input[@id="loginButton_0"]'.</msg>
+<status status="PASS" starttime="20211004 20:12:28.933" endtime="20211004 20:12:29.105"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOMEPAGE_BUTTON_POINTER}</arg>
+<arg>timeout=120s</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:29.106" endtime="20211004 20:12:36.045"></status>
+</kw>
+<status status="PASS" starttime="20211004 20:12:28.586" endtime="20211004 20:12:36.046"></status>
+</kw>
+<kw name="Home page - Select the time filter" library="CommonKeywords">
+<arguments>
+<arg>${timesele}[0]</arg>
+<arg>${locationint}[0]${imgs}[0]${INDEXcase}2.jpg</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${HOMEPAGE_GENERIC_MAP_BUTTON_TIME_FILTER}</arg>
+</arguments>
+<status status="PASS" starttime="20211004 20:12:36.052" endtime="20211004 20:12:36.456"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${HOMEPAGE_GENERIC_MAP_BUTTON_TIME_FILTER}</arg>
+</arguments>
+<msg timestamp="20211004 20:12:36.460" level="INFO">Clicking button 'xpath=(//button[@title="Time Filter"])'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211004 20:12:37.138" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.61)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19042 x86_64)
+</msg>
+<status status="FAIL" starttime="20211004 20:12:37.079" endtime="20211004 20:12:37.139"></status>
+</kw>
+<msg timestamp="20211004 20:12:37.139" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.61)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19042 x86_64)
+</msg>
+<msg timestamp="20211004 20:12:37.165" level="FAIL">AttributeError: 'NoneType' object has no attribute 'lower'</msg>
+<status status="FAIL" starttime="20211004 20:12:36.459" endtime="20211004 20:12:37.165"></status>
+</kw>
+<status status="FAIL" starttime="20211004 20:12:36.047" endtime="20211004 20:12:37.166"></status>
+</kw>
+<status status="FAIL" starttime="20211004 20:12:12.707" endtime="20211004 20:12:37.166"></status>
+</kw>
+<status status="FAIL" starttime="20211004 20:12:12.707" endtime="20211004 20:12:37.166"></status>
+</kw>
+<status status="FAIL" starttime="20211004 20:12:12.690" endtime="20211004 20:12:37.167"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211004 20:12:37.169" endtime="20211004 20:12:41.258"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>TESTDbug</tag>
+<tag>TESTPROD</tag>
+<tag>TESTRC</tag>
+</tags>
+<status status="FAIL" starttime="20211004 20:12:12.687" endtime="20211004 20:12:41.258" critical="yes">AttributeError: 'NoneType' object has no attribute 'lower'</status>
+</test>
+<status status="FAIL" starttime="20211004 20:12:10.740" endtime="20211004 20:12:41.261"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">regression</stat>
+<stat pass="0" fail="1">TESTDbug</stat>
+<stat pass="0" fail="1">TESTPROD</stat>
+<stat pass="0" fail="1">TESTRC</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211004 20:12:37.139" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.61)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19042 x86_64)
+</msg>
+</errors>
+</robot>

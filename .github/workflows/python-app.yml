@@ -12,7 +12,7 @@ jobs:
             python-version: [3.7]
         steps:
         # checkout code from a repository
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v4
         # create folder for test reports
         - name: Create folder for reports
           run: mkdir $GITHUB_WORKSPACE/geopulse_at/reports
@@ -35,9 +35,9 @@ jobs:
               ppodgorsek/robot-framework:latest
         # upload test reports as a zip file
         - name: Upload reports
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           if: always()
           with:
             name: reports
-            path: ./AUTOBOI/reports #${{ github.workspace }}/reports
+            path: AUTOBOI/reports #${{ github.workspace }}/reports
             retention-days: 5

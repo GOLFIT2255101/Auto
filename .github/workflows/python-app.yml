@@ -12,7 +12,7 @@ jobs:
             python-version: [3.7]
         steps:
         # checkout code from a repository
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         # create folder for test reports
         - name: Create folder for reports
           run: mkdir reports
@@ -41,7 +41,7 @@ jobs:
               ppodgorsek/robot-framework:latest
         # upload test reports as a zip file
         - name: Upload reports
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           if: always()
           with:
             name: reports

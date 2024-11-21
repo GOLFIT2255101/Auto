@@ -3,10 +3,8 @@
 #Resource    ../../../PageKeyword/Phonix/OpenApp.txt
 #Resource          ../../../PageVariable/Phonix/All.txt
 #Resource          ../../../PageVariable/Phonix/userID.csv
-Library     CSVLibrary
 Library    SeleniumLibrary
-Library        ExcelLibrary
-Library    OperatingSystem
+Library    ExcelLibrary
 *** Keywords ***
 
 
@@ -15,7 +13,17 @@ createaccount
 #   OpenApplogin
 #   loginrequester.loginrequesters   ${listID}
 #    Close All Browsers
+      Open Excel Document      filename=${CURDIR}/../../file_demo.xlsx      doc_id=docname1
+     ${data}=    Read Excel Cell     row_num=1          col_num=1
+     log to console   ${data}
+     Close All Excel Documents
 
-   Open Browser    https:google.com    chrome
-   Close browser
+    #${File}=    Get File   \\testtt\\TestCase\\Phonix\\Setting\\userID.csv
 
+    #log to console   ${File}
+
+    #@{list}=    Split to lines  ${File}
+    #:FOR    ${line} IN  @{list}
+    #   Log ${line}
+    #   ${Value}=   Get Variable Value  ${line}
+    #   Log ${Value}

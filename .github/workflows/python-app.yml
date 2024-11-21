@@ -33,7 +33,7 @@ jobs:
           
             docker run \
               -v /dev/shm:/dev/shm \
-              -v ${PWD}/BOI/reports:/opt/robotframework/reports:Z \
+              -v ${PWD}/reports:/opt/robotframework/reports:Z \
               -v ${PWD}/BOI:/opt/robotframework/tests:Z \
               -e ROBOT_OPTIONS=" -i TESTDbug -v ENV:QA" \
               -e BROWSER=chrome \

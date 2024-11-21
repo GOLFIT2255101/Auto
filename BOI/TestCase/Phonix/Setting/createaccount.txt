@@ -6,9 +6,11 @@ Resource          ../../../PageVariable/Phonix/All.txt
 
 
 createaccount
-   Open Excel Document      filename=${CURDIR}/Config/userID.xlsx        doc_id=docname1
-   ${listID}    Read Excel Row    row_num=2          max_num=10
-   OpenApplogin
-   loginrequester.loginrequesters   ${listID}
-   Close All Browsers
+  # Open Excel Document      filename=${CURDIR}/Config/userID.xlsx        doc_id=docname1
+  # ${listID}    Read Excel Row    row_num=2          max_num=10
+  # OpenApplogin
+  # loginrequester.loginrequesters   ${listID}
+  # Close All Browsers
+Open Browser  https://stackoverflow.com/questions/76944709/how-to-use-google-chrome-browser-for-testing-in-robot-framework   chrome
+
 }

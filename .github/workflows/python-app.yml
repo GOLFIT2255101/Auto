@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
           matrix:
-            python-version: [3.7]
+            python-version: [3.12]
         steps:
         # checkout code from a repository
         - uses: actions/checkout@v4
@@ -19,7 +19,7 @@ jobs:
         - name: install
           run: |
            pip install --upgrade robotframework-seleniumlibrary
-           pip install -U robotframework-csvlibrary
+           pip install robotframework-csvlibrary
 
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests

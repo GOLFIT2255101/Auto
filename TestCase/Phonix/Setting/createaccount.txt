@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ../../../PageKeyword/Phonix/loginrequester.txt
-Resource    ../../../PageKeyword/Phonix/OpenApp.txt
-Resource          ../../../PageVariable/Phonix/All.txt
+#Resource    ../../../PageKeyword/Phonix/loginrequester.txt
+#Resource    ../../../PageKeyword/Phonix/OpenApp.txt
+#Resource          ../../../PageVariable/Phonix/All.txt
 #Resource          ../../../PageVariable/Phonix/userID.csv
 #Library     CSVLibrary
 *** Keywords ***
@@ -9,12 +9,12 @@ Resource          ../../../PageVariable/Phonix/All.txt
 
 createaccount
    #@{listID}=  read csv file to list   ${fileCSV}
-   OpenApplogin
+   #OpenApplogin
    #loginrequester.loginrequesters   ${listID}
 
 
 
-
+   Open Browser     https://www.google.com/    chrome
 
 
    Close All Browsers

@@ -1,2 +1,0 @@
-*** Variables ***
-${DEV}   www.222.com

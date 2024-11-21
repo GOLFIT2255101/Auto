@@ -13,7 +13,7 @@ createaccount
 #   OpenApplogin
 #   loginrequester.loginrequesters   ${listID}
 #    Close All Browsers
-      Open Excel Document      filename=${CURDIR}\\file_demo.xlsx      doc_id=docname1
+      Open Excel Document      filename=${CURDIR}/file_demo.xlsx      doc_id=docname1
      ${data}=    Read Excel Cell     row_num=1          col_num=1
      log to console   ${data}
      Close All Excel Documents

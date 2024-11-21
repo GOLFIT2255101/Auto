@@ -27,7 +27,6 @@ jobs:
           # place tests in folder tests or change docker run command accordingly
           # configure -e ROBOT_OPTIONS according to yout tests, or remove it if no special configuration is needed
           run: |
-          python -m pip install --upgrade pip
           pip install robotframework-csvlibrary
             docker run \
               -v /dev/shm:/dev/shm \

@@ -4,20 +4,16 @@
 #Resource          ../../../PageVariable/Phonix/All.txt
 #Resource          ../../../PageVariable/Phonix/userID.csv
 #Library     CSVLibrary
+Library    SeleniumLibrary
 *** Keywords ***
 
 
 createaccount
-   #@{listID}=  read csv file to list   ${fileCSV}
-   #OpenApplogin
-   #loginrequester.loginrequesters   ${listID}
+#   @{listID}=  read csv file to list   ${fileCSV}
+#   OpenApplogin
+#   loginrequester.loginrequesters   ${listID}
+#    Close All Browsers
 
-
-
-   Open Browser     https://www.google.com/    chrome
-
-
-   Close All Browsers
-
-
+   Open Browser    https:google.com    chrome
+   Close browser
 

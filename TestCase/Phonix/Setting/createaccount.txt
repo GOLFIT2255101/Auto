@@ -2,25 +2,22 @@
 Resource    ../../../PageKeyword/Phonix/loginrequester.txt
 Resource    ../../../PageKeyword/Phonix/OpenApp.txt
 Resource          ../../../PageVariable/Phonix/All.txt
-Resource          ../../../PageVariable/Phonix/userID.csv
-Library     CSVLibrary
+#Resource          ../../../PageVariable/Phonix/userID.csv
+#Library     CSVLibrary
 *** Keywords ***
 
 
 createaccount
-   @{listID}=  read csv file to list   ${fileCSV}
+   #@{listID}=  read csv file to list   ${fileCSV}
    OpenApplogin
-   loginrequester.loginrequesters   ${listID}
+   #loginrequester.loginrequesters   ${listID}
 
 
 
 
 
 
-   #ValidationOnSettingEdits.ValidationOnSettingEdits   ${listPhoneNumber}
    Close All Browsers
-
-#Sign in
 
 
 

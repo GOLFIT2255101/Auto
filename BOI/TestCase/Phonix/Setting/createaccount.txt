@@ -11,6 +11,8 @@ createaccount
   # OpenApplogin
   # loginrequester.loginrequesters   ${listID}
   # Close All Browsers
-Open Browser  https://stackoverflow.com/questions/76944709/how-to-use-google-chrome-browser-for-testing-in-robot-framework   chrome
+  Open Browser  https://eboi-uat.azurewebsites.net/   chrome
+  Wait Until Page Contains element    //input[@name="loginfmt"]      timeout=60s
+  Close All Browsers
 
 }

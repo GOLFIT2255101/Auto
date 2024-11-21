@@ -6,6 +6,7 @@
 Library     CSVLibrary
 Library    SeleniumLibrary
 Library        ExcelLibrary
+Library    OperatingSystem
 *** Keywords ***
 
 

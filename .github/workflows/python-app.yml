@@ -16,10 +16,10 @@ jobs:
         # create folder for test reports
         - name: Create folder for reports
           run: mkdir reports
-        - name: install
-          run: |
+        #- name: install
+          #run: |
            #pip install --upgrade robotframework-seleniumlibrary
-           pip install robotframework-csvlibrary
+           #pip install robotframework-csvlibrary
 
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests

@@ -18,7 +18,7 @@ jobs:
           run: mkdir reports
         - name: install
           run: |
-           pip install --upgrade robotframework-seleniumlibrary
+           #pip install --upgrade robotframework-seleniumlibrary
            pip install robotframework-csvlibrary
 
         # run Robot Framework tests inside Docker container

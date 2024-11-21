@@ -34,7 +34,7 @@ jobs:
             docker run \
               -v /dev/shm:/dev/shm \
               -v ${PWD}/Auto/reports:/opt/robotframework/reports:Z \
-              -v ${PWD}/Auto:/opt/robotframework/tests:Z \
+              -v ${PWD}/Auto/opt/robotframework/tests:Z \
               -e ROBOT_OPTIONS=" -i TESTDbug -v ENV:QA" \
               -e BROWSER=chrome \
               --user $(id -u):$(id -g) \

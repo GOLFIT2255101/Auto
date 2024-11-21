@@ -1,29 +1,16 @@
 *** Settings ***
-#Resource    ../../../PageKeyword/Phonix/loginrequester.txt
-#Resource    ../../../PageKeyword/Phonix/OpenApp.txt
-#Resource          ../../../PageVariable/Phonix/All.txt
-#Resource          ../../../PageVariable/Phonix/userID.csv
+Resource    ../../../PageKeyword/Phonix/loginrequester.txt
+Resource    ../../../PageKeyword/Phonix/OpenApp.txt
+Resource          ../../../PageVariable/Phonix/All.txt
 Library    SeleniumLibrary
 Library    ExcelLibrary
 *** Keywords ***
 
 
 createaccount
-#   @{listID}=  read csv file to list   ${fileCSV}
-#   OpenApplogin
-#   loginrequester.loginrequesters   ${listID}
-#    Close All Browsers
-      Open Excel Document      filename=${CURDIR}/file_demo.xlsx      doc_id=docname1
-     ${data}=    Read Excel Cell     row_num=1          col_num=1
-     log to console   ${data}
-     Close All Excel Documents
-
-    #${File}=    Get File   \\testtt\\TestCase\\Phonix\\Setting\\userID.csv
-
-    #log to console   ${File}
-
-    #@{list}=    Split to lines  ${File}
-    #:FOR    ${line} IN  @{list}
-    #   Log ${line}
-    #   ${Value}=   Get Variable Value  ${line}
-    #   Log ${Value}
+   Open Excel Document      filename=${EXECDIR}\\PageVariable\\Phonix\\Config\\PhonNumber\\userID.xlsx        doc_id=docname1
+   ${listID}    Read Excel Row    row_num=2          max_num=10
+   OpenApplogin
+   loginrequester.loginrequesters   ${listID}
+   Close All Browsers
+}

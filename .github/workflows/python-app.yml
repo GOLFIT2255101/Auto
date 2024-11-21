@@ -12,10 +12,10 @@ jobs:
             python-version: [3.7]
         steps:
         # checkout code from a repository
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v2
         # create folder for test reports
-       # - name: Create folder for reports
-       #   run: mkdir $GITHUB_WORKSPACE/AUTOBOI/reports
+        - name: Create folder for reports
+          run: mkdir $GITHUB_WORKSPACE/geopulse_at/reports
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests
           # container used here is ppodgorsek/robot-framework:latest
@@ -26,8 +26,8 @@ jobs:
           run: |
             docker run \
               -v /dev/shm:/dev/shm \
-              -v AUTOBOI/reports:/opt/robotframework/reports:Z \
-              -v AUTOBOI:/opt/robotframework/tests:Z \
+              -v ${PWD}/AUTOBOI/reports:/opt/robotframework/reports:Z \
+              -v ${PWD}/AUTOBOI:/opt/robotframework/tests:Z \
               -e ROBOT_OPTIONS=" -i TESTDbug -v ENV:QA" \
               -e BROWSER=chrome \
               --user $(id -u):$(id -g) \
@@ -35,9 +35,9 @@ jobs:
               ppodgorsek/robot-framework:latest
         # upload test reports as a zip file
         - name: Upload reports
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v2
           if: always()
           with:
             name: reports
-            #path:  ${{ github.workspace }}/reports #./AUTOBOI/reports
+            path: ./AUTOBOI/reports #${{ github.workspace }}/reports
             retention-days: 5

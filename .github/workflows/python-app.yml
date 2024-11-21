@@ -39,5 +39,5 @@ jobs:
           if: always()
           with:
             name: reports
-            path:  ${{ github.workspace }}/reports #./AUTOBOI/reports
+            #path:  ${{ github.workspace }}/reports #./AUTOBOI/reports
             retention-days: 5

@@ -1,2 +1,0 @@
-*** Variables ***
-${QA}   https://eboi-uat.azurewebsites.net/

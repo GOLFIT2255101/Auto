@@ -16,10 +16,10 @@ jobs:
         # create folder for test reports
         - name: Create folder for reports
           run: mkdir reports
-        #- name: install
-          #run: |
-           #pip install --upgrade robotframework-seleniumlibrary
-           #pip install robotframework-csvlibrary
+        - name: install
+          run: |
+           pip install --upgrade robotframework-seleniumlibrary
+           pip install robotframework-csvlibrary
 
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests
@@ -33,8 +33,8 @@ jobs:
           
             docker run \
               -v /dev/shm:/dev/shm \
-              -v ${PWD}/AUTOBOI/reports:/opt/robotframework/reports:Z \
-              -v ${PWD}/AUTOBOI:/opt/robotframework/tests:Z \
+              -v ${PWD}/Auto/reports:/opt/robotframework/reports:Z \
+              -v ${PWD}/Auto:/opt/robotframework/tests:Z \
               -e ROBOT_OPTIONS=" -i TESTDbug -v ENV:QA" \
               -e BROWSER=chrome \
               --user $(id -u):$(id -g) \

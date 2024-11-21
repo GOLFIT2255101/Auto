@@ -1,0 +1,76 @@
+*** Settings ***
+
+Library    AppiumLibrary
+Library    Dialogs
+Library    String
+Library    Collections
+#Library     CSVLibrary
+Resource    ./OTPAll.txt
+Resource          ../../PageVariable/Phonix/All.txt
+
+*** Keywords ***
+ArvicVlidationtests
+   [Arguments]    ${listPhonNumber}
+   Wait Until Page Contains    ${Welcome}      timeout=45s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   #Click Element    ${SignPhonNumber}
+   #Input Text      ${SignonNumber}      ${listPhonNumber[1][0]}
+   #Click Element     	${ClicPhkOTP}
+   #Wait Until Page Contains    ${WaitPin}      timeout=45s
+   #ClickPin
+   #Wait Until Page Contains    ${WaitPin}      timeout=45s
+   #ClickPin
+   #Wait Until Page Contains    ${WaitNext}      timeout=45s
+   #Click Element   ${ClickNext}
+   #Wait Until Page Contains    ${WaitWelcomeMemu}      timeout=45s
+   #Click Element     ${ClickSeting}
+   #Wait Until Page Contains    ${CheckInformation}      timeout=45s
+   #Wait Until Page Contains    ${CheckOrganization}      timeout=45s
+   #Wait Until Page Contains    ${CheckContact}      timeout=45s
+   #Wait Until Page Contains    ${CheckLogout}      timeout=45s
+   #Wait Until Page Contains    ${CheckDeleteAccount}      timeout=45s
+   #Click Element     ${ClickInformation}
+   #Wait Until Page Contains    ${WaitName}      timeout=45s
+   #Swipe    999    854    998   854
+   #Wait Until Page Contains    ${WaitName}      timeout=45s
+   #Click Element     ${ClickNames}
+   #Input Text      ${ClickNames}     ${InputName}
+   #Swipe    1030    2125    1031   2125
+   #Swipe    200    400    200   400
+   #Click Element     ${ClickNamess}
+   #Input Text      ${ClickNamess}     ${InputNames}
+   #Swipe    200    400    200   400
+   #Click Element    ${ClickSave}
+   #Wait Until Page Contains    ${CheckInformation}      timeout=45s
+   #Click Element    ${Clickback}
+   #Wait Until Page Contains Element   ${ClickOut}   timeout=45s
+   #Click Element     ${ClickOut}
+   #Wait Until Page Contains Element   ${WaitOut}   timeout=45s
+   #Click Element   ${WaitOut}
+   #Wait Until Page Contains    ${Welcome}      timeout=45s
+#

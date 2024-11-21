@@ -3,7 +3,7 @@
 #Resource    ../../../PageKeyword/Phonix/OpenApp.txt
 #Resource          ../../../PageVariable/Phonix/All.txt
 #Resource          ../../../PageVariable/Phonix/userID.csv
-#Library     CSVLibrary
+Library     CSVLibrary
 Library    SeleniumLibrary
 *** Keywords ***
 

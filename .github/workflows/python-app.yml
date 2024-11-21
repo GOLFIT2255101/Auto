@@ -15,7 +15,7 @@ jobs:
         - uses: actions/checkout@v2
         # create folder for test reports
         - name: Create folder for reports
-          run: mkdir $GITHUB_WORKSPACE/geopulse_at/reports
+          run: mkdir $GITHUB_WORKSPACE/AUTOBOI/reports
         # run Robot Framework tests inside Docker container
         - name: Run Robot Framework Tests
           # container used here is ppodgorsek/robot-framework:latest
